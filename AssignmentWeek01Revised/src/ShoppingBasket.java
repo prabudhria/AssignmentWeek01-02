@@ -57,8 +57,7 @@ public class ShoppingBasket {
         String type = good.getType();
 
         if(imported) sales_tax += (float) (rate*0.05);
-        if(type.equals("book") || type.equals("food") || type.equals("medical product")){} //leaving the exemption items
-        else sales_tax += (float) (rate*0.1);
+        if(!type.equals("book") && !type.equals("food") && !type.equals("medical product")) sales_tax += (float) (rate*0.1);
 
         sales_tax = Math.round( sales_tax * 20.0) / (float)20.0;
         good.setRate(rate+sales_tax);

@@ -10,8 +10,8 @@ public class BigBillsTaxCalculator {
         String[] shopping_basket = new String[size];
         for(int i=0; i<size; i++){
             shopping_basket[i] = sc.nextLine();
-            System.out.println("What is the type?");
-            shopping_basket[i] += " type=";
+            System.out.println("What is the kind?");
+            shopping_basket[i] += " kind=";
             shopping_basket[i] += sc.nextLine();
         }
 

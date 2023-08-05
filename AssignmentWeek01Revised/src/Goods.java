@@ -1,6 +1,6 @@
 public class Goods {
     private String name;
-    private String type;
+    private Kind kind;
     private float rate;
     private int quantity;
     private boolean imported;
@@ -13,13 +13,7 @@ public class Goods {
     public void setName(String name) {
         this.name = name;
     }
-    public String getType() {
-        return type;
-    }
 
-    public void setType(String type) {
-        this.type = type;
-    }
     public float getRate() {
         return rate;
     }
@@ -52,9 +46,17 @@ public class Goods {
         this.sales_tax = sales_tax;
     }
 
-    public Goods(String name, String type, float rate, int quantity, boolean imported, float sales_tax) {
+    public Kind getKind() {
+        return kind;
+    }
+
+    public void setKind(Kind kind) {
+        this.kind = kind;
+    }
+
+    public Goods(String name, Kind kind, float rate, int quantity, boolean imported, float sales_tax) {
         this.name = name;
-        this.type = type;
+        this.kind = kind;
         this.rate = rate;
         this.quantity = quantity;
         this.imported = imported;

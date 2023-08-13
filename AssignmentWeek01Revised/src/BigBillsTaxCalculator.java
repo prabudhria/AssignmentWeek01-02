@@ -22,7 +22,7 @@ public class BigBillsTaxCalculator {
 
         for(int i=0; i<size; i++){
             Goods good = goods.get(i);
-            System.out.println(good.getQuantity() + " " + good.getName() + " :" + good.getRate());
+            System.out.println(good.getQuantity() + " " + good.getName() + " :" + String.format("%.2f", good.getRate()));
             total += good.getRate();
             sales_tax += good.getSales_tax();
         }

@@ -54,12 +54,11 @@ public class Goods {
         this.kind = kind;
     }
 
-    public Goods(String name, Kind kind, float rate, int quantity, boolean imported, float sales_tax) {
+    public Goods(String name, Kind kind, float rate, int quantity, boolean imported) {
         this.name = name;
         this.kind = kind;
         this.rate = rate;
         this.quantity = quantity;
         this.imported = imported;
-        this.sales_tax = sales_tax;
     }
 }

@@ -1,3 +1,4 @@
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,13 +16,17 @@ public class BigBillsTaxCalculator {
             shopping_basket[i] += sc.nextLine();
         }
 
+        BigBillsTaxCalculator bigBillsTaxCalculator = new BigBillsTaxCalculator();
+        bigBillsTaxCalculator.PrintReceiptDetails(shopping_basket);
+    }
+
+    public void PrintReceiptDetails(String[] shopping_basket){
         ShoppingBasket obj = new ShoppingBasket();
         ArrayList<Goods> goods = new ArrayList<Goods>();
-        goods = obj.create_good(shopping_basket);
+        goods = obj.CreateBasket(shopping_basket);
         float total=0, sales_tax=0;
 
-        for(int i=0; i<size; i++){
-            Goods good = goods.get(i);
+        for(Goods good : goods){
             System.out.println(good.getQuantity() + " " + good.getName() + " :" + String.format("%.2f", good.getRate()));
             total += good.getRate();
             sales_tax += good.getSales_tax();
@@ -29,6 +34,5 @@ public class BigBillsTaxCalculator {
 
         System.out.println("Sales Taxes:" + sales_tax);
         System.out.println("Total:" + String.format("%.2f", total));
-        //just added a branch in git
     }
 }

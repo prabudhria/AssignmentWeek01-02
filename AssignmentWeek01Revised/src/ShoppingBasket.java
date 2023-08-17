@@ -25,7 +25,7 @@ public class ShoppingBasket {
         quantity = utility.ExtractGoodQuantity(good_specification); //extracting quantity of the good
         rate = utility.ExtractGoodRate(good_specification); //extracting rate of the good
         kind = utility.ExtractGoodType(good_specification); //extracting kind of good (normal of exemption)
-        Goods good = new Goods(name, kind, rate, quantity, imported);
+        Goods good = new Goods(quantity, name, kind, rate, imported);
         sales_tax = utility.SalesTaxCalculator(quantity, rate, imported, kind); //calculating the tax applicable on the good
         good.setSales_tax(sales_tax);
         good.setRate(rate+sales_tax);  //updating the rate of the good after adding the taxes

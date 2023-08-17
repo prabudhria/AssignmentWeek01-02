@@ -54,7 +54,7 @@ public class Goods {
         this.kind = kind;
     }
 
-    public Goods(String name, Kind kind, float rate, int quantity, boolean imported) {
+    public Goods(int quantity, String name, Kind kind, float rate, boolean imported) {
         this.name = name;
         this.kind = kind;
         this.rate = rate;

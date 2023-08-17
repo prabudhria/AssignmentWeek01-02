@@ -13,8 +13,8 @@ public class Utility {
     public int ExtractGoodQuantity(String str) {
         String quantitystring = str.substring(0, str.indexOf(" "));
         return Integer.parseInt(quantitystring);
-
     }
+
 
     public Kind ExtractGoodType(String str) {
         String type = str.substring(str.indexOf("=")+1);
